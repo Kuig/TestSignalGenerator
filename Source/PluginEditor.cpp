@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Projucer version: 6.1.3
+  Created with Projucer version: 6.1.6
 
   ------------------------------------------------------------------------------
 
@@ -223,9 +223,9 @@ PluginEditor::PluginEditor (TestSignalGeneratorAudioProcessor& p, AudioProcessor
 
 
     //[UserPreSize]
-    
+
     sourceBox->addItemList(oscChoices, 1);
-     
+
     // ATTACHMENTS
     {
         gainAttachment.reset(new SliderAttachment(valueTreeState,   NAME_LVL,  *gainSlider));
@@ -320,7 +320,7 @@ void PluginEditor::paint (juce::Graphics& g)
 
     {
         int x = 18, y = 296, width = 430, height = 16;
-        juce::String text (TRANS("Coded by G.P. at Laboratorio di Informatica Musicale :: V 1.0"));
+        juce::String text (TRANS("Coded by G.P. at Laboratorio di Informatica Musicale :: V 1.0.1"));
         juce::Colour fillColour = juce::Colour (0xff617077);
         //[UserPaintCustomArguments] Customize the painting arguments here..
         //[/UserPaintCustomArguments]
@@ -476,7 +476,7 @@ void PluginEditor::sliderValueChanged (juce::Slider* sliderThatWasMoved)
         auto t = 1.0 / f1Slider->getValue();
         auto s = t * sr;
         auto decimals = (t < 1) ? 4 : ((t < 10) ? 3 : 2);
-        String info = String("F1 period: ") + String(t, decimals) <<  " sec (" << String(s, 1) << " samples); Sample rate: " << String(roundToInt(sr)) << ".";
+        String info = String("F1 period: ") + String(t, decimals) +  " sec (" + String(s, 1) + " samples); Sample rate: " + String(roundToInt(sr)) + ".";
         infoLabel->setText(info, NotificationType::sendNotification);
         //[/UserSliderCode_f1Slider]
     }
@@ -529,7 +529,7 @@ BEGIN_JUCER_METADATA
     <TEXT pos="18 10 292 30" fill="solid: ffffffff" hasStroke="0" text="Test Signal Generator"
           fontname="Default monospaced font" fontsize="20.0" kerning="0.0"
           bold="1" italic="0" justification="33" typefaceStyle="Bold"/>
-    <TEXT pos="18 296 430 16" fill="solid: ff617077" hasStroke="0" text="Coded by G.P. at Laboratorio di Informatica Musicale :: V 1.0"
+    <TEXT pos="18 296 430 16" fill="solid: ff617077" hasStroke="0" text="Coded by G.P. at Laboratorio di Informatica Musicale :: V 1.0.1"
           fontname="Default font" fontsize="15.0" kerning="0.0" bold="0"
           italic="0" justification="33"/>
   </BACKGROUND>
