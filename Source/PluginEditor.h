@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Projucer version: 6.1.6
+  Created with Projucer version: 7.0.5
 
   ------------------------------------------------------------------------------
 
@@ -22,7 +22,6 @@
 //[Headers]     -- You can add your own extra header files here --
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
-#include "Theme.h"
 
 typedef AudioProcessorValueTreeState::SliderAttachment SliderAttachment;
 typedef AudioProcessorValueTreeState::ComboBoxAttachment ComboBoxAttachment;

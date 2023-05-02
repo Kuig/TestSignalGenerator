@@ -4,7 +4,10 @@
               useAppConfig="1" addUsingNamespaceToJuceHeader="1" displaySplashScreen="1"
               jucerFormatVersion="1" pluginFormats="buildStandalone,buildVST3"
               pluginManufacturer="LIM" pluginManufacturerCode="LIM!" pluginVST3Category="Analyzer"
-              pluginChannelConfigs="{1,1},{2,2}" defines="JUCE_MODAL_LOOPS_PERMITTED = 1">
+              pluginChannelConfigs="{1,1},{2,2}" defines="JUCE_MODAL_LOOPS_PERMITTED = 1"
+              companyName="Laboratorio di Informatica Musicale" companyWebsite="www.lim.di.unimi.it"
+              aaxIdentifier="com.lim.TestSignalGenerator" bundleIdentifier="com.lim.TestSignalGenerator"
+              version="1.1.0">
   <MAINGROUP id="dqFHTh" name="TestSignalGenerator">
     <GROUP id="{1CCE002F-658E-AD83-C48C-EBD5C7AD1B8A}" name="Source">
       <FILE id="xAhaIS" name="PluginParameters.h" compile="0" resource="0"
@@ -13,7 +16,6 @@
         <FILE id="curer2" name="PluginEditor.cpp" compile="1" resource="0"
               file="Source/PluginEditor.cpp"/>
         <FILE id="JKTFLi" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
-        <FILE id="Drd1Zg" name="Theme.h" compile="0" resource="0" file="Source/Theme.h"/>
       </GROUP>
       <GROUP id="{59A85034-F1C6-C255-7BC8-799E4DC2FF9A}" name="DSP">
         <FILE id="Rzjbyh" name="OSC.h" compile="0" resource="0" file="Source/OSC.h"/>
