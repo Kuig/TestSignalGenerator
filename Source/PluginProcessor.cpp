@@ -40,10 +40,10 @@ void TestSignalGeneratorAudioProcessor::releaseResources()
 void TestSignalGeneratorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     juce::ScopedNoDenormals noDenormals;
-
+    const auto numSamples = buffer.getNumSamples();
+    
     if (isActive)
     {
-        const auto numSamples = buffer.getNumSamples();
         const auto numChannels = buffer.getNumChannels();
 
         oscillator.getNextAudioBlock(promotedBuffer, numSamples);
@@ -54,7 +54,10 @@ void TestSignalGeneratorAudioProcessor::processBlock (juce::AudioBuffer<float>& 
             buffer.copyFrom(1, 0, buffer, 0, 0, numSamples);
     }
     else
+    {
+        gain.skip(numSamples);
         buffer.clear();
+    }
 }
 
 void TestSignalGeneratorAudioProcessor::processBlock(juce::AudioBuffer<double>& buffer, juce::MidiBuffer& midiMessages)
